@@ -6,8 +6,8 @@
 - yarn android -> Android
 - yarn ios -> IOS
 
-That's is!
+That's it!
 
 
 # Backend
-Backend APIs for face detection is created in Python
+Backend APIs for face detection are created in Python
