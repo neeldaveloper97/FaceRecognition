@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/no-unstable-nested-components */
 import {StyleSheet, Text, View} from 'react-native';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
@@ -72,7 +73,7 @@ export default function FaceIdentify() {
     <View style={styles.screenLayout}>
       <Camera
         ref={camera}
-        style={StyleSheet.absoluteFill}
+        style={{flex: 1}}
         device={deviceCamera}
         isActive={true}
         photo
@@ -82,7 +83,7 @@ export default function FaceIdentify() {
         <IconButton
           style={styles.captureButton}
           size={50}
-          icon={() => <MaterialIcons name="camera" size={40} />}
+          icon={() => <MaterialIcons name="camera" size={40} color="#FFF" />}
           onPress={onDetectFace}
         />
       </View>
@@ -118,13 +119,10 @@ const styles = StyleSheet.create({
   },
   captureButtonLayout: {
     alignItems: 'center',
-    position: 'absolute',
-    bottom: 20,
-    left: 0,
-    right: 0,
+    backgroundColor: '#FFFFFF',
   },
   captureButton: {
-    backgroundColor: '#FFF',
+    backgroundColor: '#000000',
   },
   loadingLayout: {
     flexDirection: 'row',
@@ -137,8 +135,9 @@ const styles = StyleSheet.create({
     marginTop: 10,
     paddingHorizontal: 16,
     columnGap: 8,
+    position: 'absolute',
   },
   actionButton: {
-    color: '#000',
+    color: '#000000',
   },
 });

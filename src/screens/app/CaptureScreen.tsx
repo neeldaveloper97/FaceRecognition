@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 /* eslint-disable react/no-unstable-nested-components */
 import {StyleSheet, Text, View} from 'react-native';
 import React, {useEffect, useRef} from 'react';
@@ -51,7 +52,7 @@ export default function CaptureScreen() {
     <View style={styles.screenLayout}>
       <Camera
         ref={camera}
-        style={StyleSheet.absoluteFill}
+        style={{flex: 1}}
         device={deviceCamera}
         isActive={true}
         photo
@@ -61,7 +62,7 @@ export default function CaptureScreen() {
         <IconButton
           style={styles.captureButton}
           size={50}
-          icon={() => <MaterialIcons name="camera" size={40} />}
+          icon={() => <MaterialIcons name="camera" size={40} color="white" />}
           onPress={onPressCapture}
         />
       </View>
@@ -76,12 +77,9 @@ const styles = StyleSheet.create({
   },
   captureButtonLayout: {
     alignItems: 'center',
-    position: 'absolute',
-    bottom: 20,
-    left: 0,
-    right: 0,
+    backgroundColor: '#FFFFFF',
   },
   captureButton: {
-    backgroundColor: 'white',
+    backgroundColor: '#000000',
   },
 });
