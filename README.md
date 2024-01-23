@@ -6,7 +6,7 @@
 - yarn android -> Android
 - yarn ios -> IOS
 
-That't is!
+That's is!
 
 
 # Backend
